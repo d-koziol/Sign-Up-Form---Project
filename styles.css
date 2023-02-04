@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+root {
+
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.side-bar,
+.form {
+    border: 3px solid black;
+}
+
+.side-bar {
+    width: 40%;
+    height: 100%;
+    background-image: url(img/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg);
+    background-size: cover;
+}
+
+.form-section {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    
+    
+
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+}
+
+.logo {
+    
+}
+
