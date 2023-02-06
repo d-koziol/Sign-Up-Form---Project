@@ -22,27 +22,56 @@ body {
 .side-bar {
     width: 40%;
     height: 100%;
-    background-image: url(img/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg);
+    background-image: url(img/8753.jpg);
     background-size: cover;
+   
 }
 
 .form-section {
     width: 60%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     padding-left: 30px;
+    margin: 20px;
+    margin-top: 100px;
     
-    
-
 }
 
 form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+  height: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  
+
+}
+
+.input {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+h1 {
+    height: 30%;
+}
+
+input {
+    height: 20px;
+    width: 250px;
+    border-radius: 3px;
+    border-color: rgb(205, 205, 206);
+    display: flex;
+
+}
+
+button {
+    height: 30px;
+    width: 200px;
+    background-color: purple;
+    color: white;
+    font-weight: 800;
+}
+
+label {
 
 }
 
