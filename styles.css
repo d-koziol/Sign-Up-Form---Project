@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@font-face {
+    font-family: "MyFont";
+    src: url(/Font/SFQuartzite-Oblique.ttf);
+}
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: 'Indie Flower', cursive;
 }
 
@@ -12,6 +17,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-flow: row wrap;
     background-color: rgb(31, 31, 31);
     color: rgb(230, 230, 230);
 }
@@ -19,8 +25,7 @@ body {
 /*Left Side Heading*/
 
 .side-bar {
-    width: 40%;
-    height: 100%;
+    width: 40vw;
     background-image: url(img/8753.jpg);
     background-size: cover;
    
@@ -31,70 +36,127 @@ body {
     border: 1px solid black;
 }
 
+.logo {
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    top: 20vh;
+    gap: 1vw;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    display: flex;
+}
+
+.logo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.rocket {
+    height: 13vh;
+}
+
 /* Form styling*/
 
 .form-section {
-    width: 60%;
-    height: 100%;
+    width: 60vw;
     margin-top: 100px;
 }
 
 form {
-  height: 30%;
+  height: 35%;
   display: flex;
   flex-flow: row wrap;
   background-color: rgb(34, 34, 34);
   box-shadow: 0 10px 20px -2px rgb(22, 22, 22);
   font-size: 20px;
   font-weight: bold;
+  
 }
 
 .input {
     display: flex;
     flex-flow: column wrap;
     gap: 5px;
+    margin-left: 30px;
     
 }
 
 .right {
-    padding-left: 50px;
+    
 }
 
 h1 {
     height: 30%;
-    font-size: 25px;
+    font-size: 50px;
+    color: purple;
+    text-shadow: 1px 1px white;
+    font-family: MyFont;
+    font-size: 50px;
 }
 
 h2 {
     width: 100%;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
+    margin-left: 30px;
 }
 
 input {
     height: 25px;
-    width: 250px;
+    width: 20vw;
     border-radius: 3px;
     border-color: rgb(205, 205, 206);
-    display: flex;   
+    display: flex; 
+    flex-flow: row wrap;  
     font-size: 20px;
-    
+    grid-template-rows: 1fr 1fr;
+     
 }
-
 
 button {
     height: 40px;
-    width: 200px;
+    width: 20vw;
     background-color: purple;
     color: white;
     font-weight: 800;
-    font-size: 16px;
-    margin-top: 50px;
+    font-size: 20px;
+    margin: 30px;
     border-radius: 5px;
-    border: none;
+    border: 2px solid white ;
+    transition: 0.5s;
+
+
+}
+
+button:hover {
+    background-color: white;
+    color: purple;
+    border-color: purple;
+    transition: 0.5s;
 }
 
 
+
+.log-in {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 40px;
+    font-size: 19px;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+    font-size: 23px;
+    font-weight: bolder;
+}
 
 
 /*Valid, invalid inputs*/
@@ -107,6 +169,74 @@ input:valid {
 input:invalid {
     border-color: red;
     background-color: lightcoral;
+}
+
+input:required {
+    background-color: rgb(51, 51, 51);
+    border-color: black;
+}
+
+
+
+
+@media only screen and (max-width: 600px)  {
+    body{
+        flex-flow: column;
+        height: auto;
+        text-align: center;
+    }
+    .logo{
+        width: 100vw;
+        height: 15vh;
+        display: flex;
+        background-size: 100vw;
+    }
+    .logo-content{
+        width: 100vw;
+        position: static;
+        gap: 10px;
+    }
+    .form-section{
+        width: auto;
+        height: auto;
+    }
+    h2{
+        width: auto;
+        margin-top: 30px;
+
+    }
+    .side-bar{
+        padding: 10px 20px;
+    }
+    form{
+        flex-flow: column nowrap;
+        align-items: center;
+
+    }
+    .input{
+        text-align: left;
+        width: auto;
+        font-size: 0.9em;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        font-size: 0.9rem;
+        height: 1.5rem;
+        width: auto;
+    }
+    .button,
+    .log-in{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+    button{
+        margin-bottom: 0px;
+        width: 60vw;
+        padding: 10px 5px;
+    }
+
 }
 
 
