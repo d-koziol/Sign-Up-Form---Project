@@ -115,7 +115,8 @@ input {
     flex-flow: row wrap;  
     font-size: 20px;
     grid-template-rows: 1fr 1fr;
-     
+    color: white;
+    
 }
 
 button {
@@ -171,6 +172,7 @@ a:hover {
 input:valid {
     border-color: green;
     background-color: lightgreen;
+    
 }
 
 input:invalid {
