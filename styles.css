@@ -87,10 +87,6 @@ form {
     
 }
 
-.right {
-    
-}
-
 h1 {
     height: 30%;
     font-size: 50px;
@@ -102,12 +98,12 @@ h1 {
 h2 {
     width: 100%;
     padding-top: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     margin-left: 30px;
 }
 
 input {
-    height: 25px;
+    height: 30px;
     width: 20vw;
     border-radius: 3px;
     border-color: rgb(205, 205, 206);
@@ -115,8 +111,11 @@ input {
     flex-flow: row wrap;  
     font-size: 20px;
     grid-template-rows: 1fr 1fr;
-    color: white;
-    
+    color: white; 
+}
+
+p {
+    width: 20vw;
 }
 
 button {
@@ -180,7 +179,8 @@ input:invalid {
     background-color: lightcoral;
 }
 
-input:required {
+input:placeholder-shown,
+input:not(:placeholder-shown):invalid {
     background-color: rgb(51, 51, 51);
     border-color: black;
 }
@@ -189,7 +189,7 @@ input:focus {
     caret-color: white;
 }
 
-
+/*Media*/
 
 @media only screen and (max-width: 600px)  {
     body{

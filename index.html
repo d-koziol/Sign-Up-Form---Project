@@ -39,8 +39,7 @@
             >
         </div>
 
-
-        <div class="input right">
+        <div class="input">
             <label for="last-name">LAST NAME</label>
             <input 
                 type="text" 
@@ -49,7 +48,6 @@
                 required
             >
         </div>
-
 
         <div class="input">
             <label for="email">EMAIL</label>
@@ -61,8 +59,7 @@
             >
         </div>
 
-
-        <div class="input right">
+        <div class="input">
             <label for="phone-number">PHONE NUMBER ( 9-13 characters )</label>
             <input 
                 type="number" 
@@ -70,34 +67,36 @@
                 placeholder="111222333"
                 minlength="9"
                 maxlength="13"
+                pattern="/^\d+$/"
                 required
             >
         </div>
-
 
         <div class="input">
             <label for="password">PASSWORD</label>
             <input 
                 type="password" 
                 id="password"
+                pattern="/(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/"
                 required
             >
+            <p>Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8 characters long</p>
         </div>
 
-
-        <div class="input right">
+        <div class="input">
             <label for="confirm-password">CONFIRM PASSWORD</label>
             <input 
                 type="password" 
                 id="confirm-password"
+                pattern="/(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/"
                 required
             >
+            <p>Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8 characters long</p>
         </div>
 
         <div class="submit-btn"><button type="submit">Create Accout</button></div>
 
     </form>
-
 
     <div class="log-in"><p>Already have an account?</p><a href="#">Log in</a></div>
 
