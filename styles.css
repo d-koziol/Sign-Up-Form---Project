@@ -112,6 +112,7 @@ input {
     font-size: 20px;
     grid-template-rows: 1fr 1fr;
     color: white; 
+    caret-color: white;
 }
 
 p {
@@ -168,25 +169,91 @@ a:hover {
 
 /*Valid, invalid inputs*/
 
-input:valid {
-    border-color: green;
-    background-color: lightgreen;
-    
+#reg-form input:focus + label,
+#reg-form input[required]:valid + label,
+#reg-form input:not(:placeholder-shown) + label,
+#reg-form textarea:focus + label,
+#reg-form textarea:valid + label,
+#reg-form textarea:not(:placeholder-shown) + label {
+    display: block;
 }
-
-input:invalid {
-    border-color: red;
-    background-color: lightcoral;
+#reg-form input:invalid,
+#reg-form textarea:invalid {
+    border: 1px solid #b92326;
+    background-color: rgba(185, 35, 38, 0.25);
 }
-
-input:placeholder-shown,
-input:not(:placeholder-shown):invalid {
-    background-color: rgb(51, 51, 51);
-    border-color: black;
+#reg-form input:focus:invalid,
+#reg-form textarea:focus:invalid {
+    background-color: transparent;
+    border: 1px solid #b92326;
 }
-
-input:focus {
-    caret-color: white;
+#reg-form input:invalid + label,
+#reg-form textarea:invalid + label {
+    color: #b92326;
+}
+#reg-form input:invalid + label,
+#reg-form textarea:invalid + label {
+    color: #b92326;
+}
+#reg-form input:focus:invalid + label:after,
+#reg-form textarea:focus:invalid + label:after {
+    content: " (" attr(data-help) ")";
+    animation: silo-help 100s;
+}
+#reg-form input:invalid + label:after,
+#reg-form textarea:invalid + label:after {
+    content: " (" attr(data-help) ")";
+}
+#reg-form input:valid,
+#reg-form textarea:valid {
+    border: 1px solid #8BC34A;
+    background-color: rgba(139, 195, 74, 0.25);
+}
+#reg-form input:focus:valid,
+#reg-form textarea:focus:valid {
+    border: 1px solid #8BC34A;
+    background-color: transparent;
+}
+#reg-form input:valid + label,
+#reg-form textarea:valid + label {
+    color: #8BC34A;
+}
+#reg-form input:placeholder-shown,
+#reg-form textarea:placeholder-shown {
+    background-color: transparent;
+    border: 1px solid #d8d8d8;
+}
+#reg-form input::placeholder,
+#reg-form textarea::placeholder {
+    color: #616161;
+}
+#reg-form input::-webkit-input-placeholder,
+#reg-form textarea::-webkit-input-placeholder {
+    color: #616161;
+}
+#reg-form input:-ms-input-placeholder,
+#reg-form textarea:-ms-input-placeholder {
+    color: #d8d8d8;
+}
+#reg-form input::-moz-placeholder,
+#reg-form textarea::-moz-placeholder {
+    color: #d8d8d8;
+}
+#reg-form input:focus::placeholder,
+#reg-form textarea:focus::placeholder {
+    color: transparent;
+}
+#reg-form input:focus::-webkit-input-placeholder,
+#reg-form textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+#reg-form input:focus:-ms-input-placeholder,
+#reg-form textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+#reg-form input:focus::-moz-placeholder,
+#reg-form textarea:focus::-moz-placeholder {
+    color: transparent;
 }
 
 /*Media*/
